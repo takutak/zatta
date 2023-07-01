@@ -62,6 +62,7 @@ while to_visit and page_count < max_pages:
                 page_count += 1
             links = find_links(soup, base_url)
             to_visit.extend(links)
+            time.sleep(1)
         except Exception as e:
             print(f"Error on page {url}: {e}")
 
