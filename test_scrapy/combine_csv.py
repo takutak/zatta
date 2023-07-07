@@ -12,7 +12,7 @@ seen_instructions = set()
 
 output_file_name = input("出力するcsvファイルの名前を入力：")
 # 出力用のCSVファイルを開く
-with open('output_file_name', 'w', newline='', encoding='utf-8') as outfile:  # ここで 'utf-8' を指定
+with open(output_file_name, 'w', newline='', encoding='utf-8') as outfile:  # ここで 'utf-8' を指定
     writer = csv.writer(outfile)
 
     for file in csv_files:
@@ -33,3 +33,4 @@ with open('output_file_name', 'w', newline='', encoding='utf-8') as outfile:  # 
                 if instruction not in seen_instructions:
                     writer.writerow(row)
                     seen_instructions.add(instruction)
+        print(f"{file}は正常に追加しました。")
