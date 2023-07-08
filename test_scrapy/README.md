@@ -1,0 +1,3 @@
+wikipediaから1秒刻みでスクレイピングを行う。\\
+出力は、instructとoutputからなるcsvファイル。
+setting1のmain.pyで、題名-概要のペアが作れるので、それをcombine_csv.pyで重複なしで結合し、その後change_instruction.pyでinstruct列の語尾を変更すれば、良い感じのデータセットがwikipediaから得ることができる。
